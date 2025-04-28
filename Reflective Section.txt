@@ -1,0 +1,21 @@
+first question :
+First, the script checks if the first argument starts with a - (option).
+If yes:
+It saves the option (like -n, -v, or -vn) into a variable opts.
+It then uses shift to move the remaining arguments (search string and file) to $1 and $2.
+If no option:
+It directly treats $1 as the search string and $2 as the file.
+After that:
+It checks if both the search string and file are present.
+It checks if the file exists.
+Then, it constructs the grep command:
+Always uses -i (case-insensitive)
+Adds -n if needed (line numbers)
+Adds -v if needed (invert match)
+
+second question :
+i don't know how to restructure it , but i will think about
+
+third question :
+hardest part is the arrangment of argument how to deal with 
+so i used shift command , which is genius choice 
