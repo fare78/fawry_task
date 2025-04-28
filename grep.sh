@@ -1,5 +1,13 @@
 #!usr/bin/bash
-
+if [[ "$1" == "--help" ]]; then
+  echo "Usage: ./mygrep.sh [options] search_string filename"
+  echo
+  echo "Options:"
+  echo "  -n    Show line numbers"
+  echo "  -v    Invert match (show non-matching lines)"
+  echo "  --help Show this help message"
+  exit 0
+fi
 # Check if enough arguments
 if [ $# -lt 2 ]; then
     echo "please use command in this way"
